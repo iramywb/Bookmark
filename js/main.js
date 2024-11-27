@@ -139,7 +139,7 @@ bookmarkNameInput.addEventListener('input', function () {
     }
 });
 bookmarkURLInput.addEventListener('input', function () {
-    var regex = /^(https?:\/\/)?(w{3}\.)?\w+\.\w{2,}\/?(:\d{2,5})?(\/\w+)*$/;
+    var regex = /^((https?:\/\/)?((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}(:\d{2,5})?)$|^(https?:\/\/)?(w{3}\.)?\w+\.\w{2,}(:\d{2,5})?(\/[\w-]*)*$/;
     if (regex.test(bookmarkURLInput.value)) {
         bookmarkURLInput.classList.add("is-valid");
         bookmarkURLInput.classList.remove("is-invalid");

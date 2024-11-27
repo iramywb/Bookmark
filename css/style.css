@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "PT Sans Caption", sans-serif;
+}
+::selection {
+    background-color: #fec260;
+}
+main {
+    background-color: #f7ecde;
+}
+@font-face {
+    font-family: "Pacifico";
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: "Righteous";
+    src: url(../webfonts/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: "PT Sans Caption";
+    src: url("../webfonts/PT Sans Caption/PTSansCaption-Regular.ttf");
+}
+@font-face {
+    font-family: "PT Sans Caption";
+    src: url("../webfonts/PT Sans Caption/PTSansCaption-Bold.ttf");
+    font-weight: 700;
+}
+.rules .xmark {
+    color: #bb4120;
+}
+.rules .checkmark {
+    color: #34b233;
+}
+.circles li {
+    --box-size: 20px;
+    width: var(--box-size);
+    height: var(--box-size);
+}
+.circles li:nth-child(1) {
+    background-color: #f15f5d;
+}
+.circles li:nth-child(2) {
+    background-color: #febe2e;
+}
+.circles li:nth-child(3) {
+    background-color: #4db748;
+}
+.error-box {
+    min-width: 500px;
+}
+.inputs {
+    border-block: dotted black 2px;
+}
+.subtitle {
+    font-family: "Righteous", cursive;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+}
+/* fixes the selection as it will override the background color and text color is transparent so it will disappear */
+.subtitle::selection {
+    color: #352e28;
+}
+.title {
+    position: relative;
+    text-align: center;
+    isolation: isolate;
+    color: #352e28;
+    font-family: "Pacifico", cursive;
+}
+.title::before {
+    content: "";
+    display: block;
+    background-color: #fec260;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 65%;
+    z-index: -1;
+    transition: top 0.3s;
+}
+.title:hover::before {
+    top: 33%;
+}
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-submit {
+    --bs-btn-bg: #d1512d;
+    --bs-btn-hover-bg: #bb4120;
+    
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-border-color: #a03315;
+}
+.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+.btn-delete {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+.custom-table {
+    vertical-align: middle;
+}
